@@ -1,5 +1,6 @@
 ﻿using CinemaVendas.Core.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using System;
 
 namespace CinemaVendas.API.Controllers
 {
@@ -24,5 +25,12 @@ namespace CinemaVendas.API.Controllers
 
             return Ok(result);
         }
+
+        [HttpGet]
+        public string Ola()
+        {
+            return "Olá Mundo" + DateTime.Now.Day;
+        }
+
     }
 }
